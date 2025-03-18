@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <id>student1</id>
+        <name>John Doe</name>
+        <email>john.doe@example.com</email>
+        <password>pass123</password>
+    </student>
+    <student>
+        <id>student2</id>
+        <name>Jane Smith</name>
+        <email>jane.smith@example.com</email>
+        <password>secure456</password>
+    <book><id>bk104</id></book></student>
+    <student>
+        <id>student3</id>
+        <name>Michael Johnson</name>
+        <email>michael.j@example.com</email>
+        <password>mikepass789</password>
+    </student>
+</students>

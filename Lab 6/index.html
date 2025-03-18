@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Admin Panel (XML)</title>
+    <script src="ajax.js" defer></script>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <h2>📚 Library Admin Panel</h2>
+
+    <button onclick="fetchBooks()">Show All Books</button>
+
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publish Date</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h3>🔍 Show Book by ID</h3>
+    <button onclick="showBookById()">Show Book IDs</button>
+    
+    <table id="bookIdTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="bookDetails"></div>
+</body>
+</html>

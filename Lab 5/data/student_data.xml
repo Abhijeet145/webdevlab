@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student_data.xsl"?>
+<students>
+    <student>
+        <id>student1</id>
+        <name>John Doe</name>
+        <email>john.doe@example.com</email>
+        <password>pass123</password>
+        <book><id>bk102</id><title>Midnight Rain</title></book><book><id>bk103</id><title>Maeve Ascendant</title></book><book><id>bk108</id><title>Creepy Crawlies</title></book></student>
+    <student>
+        <id>student2</id>
+        <name>Jane Smith</name>
+        <email>jane.smith@example.com</email>
+        <password>secure456</password>
+        </student>
+    <student>
+        <id>student3</id>
+        <name>Michael Johnson</name>
+        <email>michael.j@example.com</email>
+        <password>mikepass789</password>
+    </student>
+<student><id>test123</id><name>Abhijeet Kumar</name><email>abhijeet145.akm@gmail.com</email><password>1234</password></student></students>

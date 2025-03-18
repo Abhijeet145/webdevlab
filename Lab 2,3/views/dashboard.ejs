@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+<div class="container">
+  <h1>Welcome, <%= user.fullName %>!</h1>
+
+  <!-- Policy Claim Section -->
+  <a href="/claim-policy" class="btn">Claim New Policy</a>
+
+  <!-- Display Existing Policies -->
+  <h2>Your Policies</h2>
+  <% if (policies.length > 0) { %>
+  <div class="policy-list">
+    <% policies.forEach(policy => { %>
+    <div class="policy-card">
+      <p><strong>Policy Number:</strong> <%= policy.policyNumber %></p>
+      <p>
+        <strong>Incident Date:</strong> <%=
+        policy.incidentDate.toLocaleDateString() %>
+      </p>
+      <p><strong>Details:</strong> <%= policy.incidentDetails %></p>
+    </div>
+    <% }) %>
+  </div>
+  <% } else { %>
+  <p>No policies found. Claim a new policy!</p>
+  <% } %>
+
+  <!-- Logout Button -->
+  <a href="/logout" class="btn">Logout</a>
+</div>
+<%- include('partials/footer') %>
