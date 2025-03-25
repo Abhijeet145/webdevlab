@@ -1,0 +1,248 @@
+<products>
+    <!-- Electronics -->
+    <product>
+        <id>1</id>
+        <name>Smartphone</name>
+        <category>Electronics</category>
+        <price>699.99</price>
+        <description>Latest smartphone with high-end specs.</description>
+        <image>images/smartphone.jpg</image>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Laptop</name>
+        <category>Electronics</category>
+        <price>999.99</price>
+        <description>Powerful laptop for work and gaming.</description>
+        <image>images/laptop.jpg</image>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Headphones</name>
+        <category>Electronics</category>
+        <price>149.99</price>
+        <description>Wireless headphones with noise cancellation.</description>
+        <image>images/headphones.jpg</image>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Smartwatch</name>
+        <category>Electronics</category>
+        <price>199.99</price>
+        <description>Track your fitness and notifications on the go.</description>
+        <image>images/smartwatch.jpg</image>
+    </product>
+    <product>
+        <id>5</id>
+        <name>Tablet</name>
+        <category>Electronics</category>
+        <price>399.99</price>
+        <description>Portable tablet for work and entertainment.</description>
+        <image>images/tablet.jpg</image>
+    </product>
+    <product>
+        <id>6</id>
+        <name>Gaming Console</name>
+        <category>Electronics</category>
+        <price>499.99</price>
+        <description>Next-gen gaming console for immersive play.</description>
+        <image>images/console.jpg</image>
+    </product>
+    <product>
+        <id>7</id>
+        <name>Bluetooth Speaker</name>
+        <category>Electronics</category>
+        <price>79.99</price>
+        <description>Portable speaker with powerful sound.</description>
+        <image>images/speaker.jpg</image>
+    </product>
+    <product>
+        <id>8</id>
+        <name>External Hard Drive</name>
+        <category>Electronics</category>
+        <price>120.99</price>
+        <description>1TB storage for all your files.</description>
+        <image>images/harddrive.jpg</image>
+    </product>
+    <product>
+        <id>9</id>
+        <name>Camera</name>
+        <category>Electronics</category>
+        <price>849.99</price>
+        <description>High-resolution DSLR for photography lovers.</description>
+        <image>images/camera.jpg</image>
+    </product>
+    <product>
+        <id>10</id>
+        <name>Wireless Mouse</name>
+        <category>Electronics</category>
+        <price>29.99</price>
+        <description>Ergonomic wireless mouse for daily use.</description>
+        <image>images/mouse.jpg</image>
+    </product>
+
+    <!-- Clothing -->
+    <product>
+        <id>11</id>
+        <name>T-Shirt</name>
+        <category>Clothing</category>
+        <price>19.99</price>
+        <description>Comfortable cotton t-shirt in various colors.</description>
+        <image>images/tshirt.jpg</image>
+    </product>
+    <product>
+        <id>12</id>
+        <name>Jeans</name>
+        <category>Clothing</category>
+        <price>49.99</price>
+        <description>Stylish and durable denim jeans.</description>
+        <image>images/jeans.jpg</image>
+    </product>
+    <product>
+        <id>13</id>
+        <name>Jacket</name>
+        <category>Clothing</category>
+        <price>89.99</price>
+        <description>Warm winter jacket for cold weather.</description>
+        <image>images/jacket.jpg</image>
+    </product>
+    <product>
+        <id>14</id>
+        <name>Running Shoes</name>
+        <category>Clothing</category>
+        <price>79.99</price>
+        <description>Comfortable shoes for running and sports.</description>
+        <image>images/shoes.jpg</image>
+    </product>
+    <product>
+        <id>15</id>
+        <name>Dress</name>
+        <category>Clothing</category>
+        <price>59.99</price>
+        <description>Elegant dress for formal occasions.</description>
+        <image>images/dress.jpg</image>
+    </product>
+    <product>
+        <id>16</id>
+        <name>Cap</name>
+        <category>Clothing</category>
+        <price>14.99</price>
+        <description>Stylish cap to complement your outfit.</description>
+        <image>images/cap.jpg</image>
+    </product>
+    <product>
+        <id>17</id>
+        <name>Backpack</name>
+        <category>Clothing</category>
+        <price>39.99</price>
+        <description>Spacious backpack for daily use.</description>
+        <image>images/backpack.jpg</image>
+    </product>
+    <product>
+        <id>18</id>
+        <name>Formal Shirt</name>
+        <category>Clothing</category>
+        <price>34.99</price>
+        <description>Perfect shirt for office wear.</description>
+        <image>images/formalshirt.jpg</image>
+    </product>
+    <product>
+        <id>19</id>
+        <name>Socks</name>
+        <category>Clothing</category>
+        <price>9.99</price>
+        <description>Soft and comfortable socks.</description>
+        <image>images/socks.jpg</image>
+    </product>
+    <product>
+        <id>20</id>
+        <name>Gloves</name>
+        <category>Clothing</category>
+        <price>24.99</price>
+        <description>Warm gloves for winter.</description>
+        <image>images/gloves.jpg</image>
+    </product>
+
+    <!-- Books -->
+    <product>
+        <id>26</id>
+        <name>Self-Help Guide</name>
+        <category>Books</category>
+        <price>18.99</price>
+        <description>Improve your daily habits and achieve success.</description>
+        <image>images/selfhelp.jpg</image>
+    </product>
+    <product>
+        <id>27</id>
+        <name>Mystery Thriller</name>
+        <category>Books</category>
+        <price>22.50</price>
+        <description>A gripping mystery that keeps you on the edge.</description>
+        <image>images/mystery.jpg</image>
+    </product>
+    <product>
+        <id>28</id>
+        <name>Programming in Python</name>
+        <category>Books</category>
+        <price>35.99</price>
+        <description>Comprehensive guide to mastering Python.</description>
+        <image>images/python.jpg</image>
+    </product>
+    <product>
+        <id>29</id>
+        <name>Artificial Intelligence</name>
+        <category>Books</category>
+        <price>44.99</price>
+        <description>Understand AI concepts and applications.</description>
+        <image>images/ai.jpg</image>
+    </product>
+    <product>
+        <id>30</id>
+        <name>Business Strategies</name>
+        <category>Books</category>
+        <price>27.99</price>
+        <description>Learn the secrets of successful business leaders.</description>
+        <image>images/business.jpg</image>
+    </product>
+    <product>
+        <id>31</id>
+        <name>Biology Essentials</name>
+        <category>Books</category>
+        <price>31.99</price>
+        <description>A detailed look at fundamental biological concepts.</description>
+        <image>images/biology.jpg</image>
+    </product>
+    <product>
+        <id>32</id>
+        <name>Quantum Mechanics</name>
+        <category>Books</category>
+        <price>49.99</price>
+        <description>Deep dive into the principles of quantum physics.</description>
+        <image>images/quantum.jpg</image>
+    </product>
+    <product>
+        <id>33</id>
+        <name>Philosophy of Mind</name>
+        <category>Books</category>
+        <price>25.50</price>
+        <description>Explore theories of consciousness and perception.</description>
+        <image>images/philosophy.jpg</image>
+    </product>
+    <product>
+        <id>34</id>
+        <name>Poetry Collection</name>
+        <category>Books</category>
+        <price>15.99</price>
+        <description>A collection of poems from renowned authors.</description>
+        <image>images/poetry.jpg</image>
+    </product>
+    <product>
+        <id>35</id>
+        <name>Space Exploration</name>
+        <category>Books</category>
+        <price>38.99</price>
+        <description>Discover humanity's journey into space.</description>
+        <image>images/space.jpg</image>
+    </product>
+
+</products>
