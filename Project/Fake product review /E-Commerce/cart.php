@@ -42,6 +42,7 @@ $totalAmount = 0;
 </head>
 <body>
     <div class="container">
+    <a href="indexx.php" style="display:inline-block; margin-bottom:20px; background:#007bff; color:white; padding:10px 15px; border-radius:5px; text-decoration:none;">← Back to Shop</a>
         <h1>Shopping Cart</h1>
         
         <?php if ($cartItems && count($cartItems->item) > 0): ?>

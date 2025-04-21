@@ -16,7 +16,7 @@ $totalAmount = isset($_GET['amount']) ? $_GET['amount'] : '0.00';
         .container { width: 50%; margin: auto; padding: 20px; border: 1px solid #ddd; background-color: #f9f9f9; }
         .success-message { color: #28a745; font-size: 20px; font-weight: bold; }
         .home-button {
-            background: #007bff;
+            background:#28a745;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -31,7 +31,11 @@ $totalAmount = isset($_GET['amount']) ? $_GET['amount'] : '0.00';
         <h1 class="success-message">Payment Successful!</h1>
         <p>Thank you for your purchase.</p>
         <p>Total Amount Paid: <strong>$<?php echo htmlspecialchars($totalAmount); ?></strong></p>
-        <a href="../E-Commerce/index.php" class="home-button">Return to Homepage</a>
+        <form action="../E-Commerce/indexx.php" method="post">
+            <input type="hidden" name="orderPlaced" value="true">
+            <input type="hidden" name="cart" value="true">
+            <button type="submit" class="home-button">Return to Homepage</button>
+        </form>
     </div>
 </body>
 </html>
