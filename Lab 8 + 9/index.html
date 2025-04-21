@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: http://localhost:3000">
+    <link rel="stylesheet" href="style.css">
+    <title>Real-Time Chat App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <!-- Add this in the <head> -->
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <h2 class="center-text">Real-Time Chat Application</h2>
+    </div>
+
+    <div id="login-container">
+        <input type="text" id="username" placeholder="Enter your name..." autofocus autocomplete="off">
+        <button onclick="joinChat()">Join Chat</button>
+    </div>
+
+    <div id="chat-container">
+        <h3 id="welcome-message"></h3>
+        <div id="chat-box"></div>
+        <form id="controls">
+            <input type="text" id="message" placeholder="Type a message..." autocomplete="off">
+            <input type="file" id="image" accept="image/*">
+            <button onclick="sendMessage()" type="button">Send</button>
+        </form>
+    </div>
+
+    <script>
+        const socket = io("http://localhost:3000");
+        const SECRET_KEY = "mySuperSecretKey123";
+        let username = "";
+
+        function joinChat() {
+            username = document.getElementById("username").value.trim();
+            if (!username) return alert("Please enter your name!");
+
+            localStorage.setItem("username", username);
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("chat-container").style.display = "block";
+            document.getElementById("welcome-message").innerText = `Welcome, ${username}!`;
+        }
+
+        // Load encrypted messages
+        socket.on("loadMessages", (messages) => messages.forEach(displayMessage));
+
+        socket.on("receiveMessage", (data) => displayMessage(data,false,true));
+
+        function sendMessage(e) {
+            if (e && typeof e.preventDefault === "function") {
+                e.preventDefault();
+            }
+
+            const message = document.getElementById("message").value.trim();
+            const imageInput = document.getElementById("image");
+            const file = imageInput.files[0];
+
+            if (!username) {
+                alert("Please enter your name!");
+                return;
+            }
+
+            if (!message && !file) {
+                alert("Please enter a message or select an image!");
+                return;
+            }
+
+            if (file) {
+                const formData = new FormData();
+                formData.append("image", file);
+
+                fetch("/upload", { method: "POST", body: formData })
+                    .then(res => res.json())
+                    .then(data => {
+                        socket.emit("sendMessage", { sender: username, message: data.imageUrl, type: "image" });
+                        displayMessage({ sender: username, message: data.imageUrl, type: "image" }, true);
+                    });
+            } else {
+                const encrypted = CryptoJS.AES.encrypt(message, SECRET_KEY).toString();
+                socket.emit("sendMessage", { sender: username, message: encrypted, type: "text" });
+                displayMessage({ sender: username, message: encrypted, type: "text" }, true);
+            }
+
+            // Clear inputs
+            document.getElementById("message").value = "";
+            imageInput.value = "";
+        }
+
+
+        function displayMessage(data, isSender = false,isDelivered = false) {
+            const chatBox = document.getElementById("chat-box");
+            const div = document.createElement("div");
+            div.classList.add("message", isSender ? "sent" : "received");
+
+            let displayMsg = data.message;
+            if (data.type === "text") {
+                try {
+                    const bytes = CryptoJS.AES.decrypt(data.message, SECRET_KEY);
+                    displayMsg = bytes.toString(CryptoJS.enc.Utf8) || "[Decryption failed]";
+                } catch (e) {
+                    displayMsg = "[Decryption error]";
+                }
+            }
+
+            div.innerHTML = `<b>${data.sender}:</b> ${data.type === "image" ? `<img src="${data.message}" alt="Image"/>` : displayMsg
+                } <span class="status">${isSender ? "✔️" : ""}${ (data.sender === username && isDelivered) ? "✔️" : ""}</span>`;
+
+            console.log(data.sender, username, isDelivered);
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        document.getElementById("message").addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

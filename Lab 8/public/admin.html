@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Admin Panel</h2>
+    <div id="messages"></div>
+
+    <input type="text" id="adminMsgInput" placeholder="Type a server message..." />
+    <input type="file" id="adminImgInput" accept="image/*" />
+    <button id="adminSendBtn">Send</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const adminMsgInput = document.getElementById('adminMsgInput');
+    const adminImgInput = document.getElementById('adminImgInput');
+    const adminSendBtn = document.getElementById('adminSendBtn');
+    const messagesDiv = document.getElementById('messages');
+
+    socket.on('loadHistory', (msgs) => {
+      msgs.forEach(renderMessage);
+    });
+
+    socket.on('newMessage', renderMessage);
+
+    function renderMessage(msg) {
+      const div = document.createElement('div');
+      div.classList.add('message');
+
+      if (msg.type === 'text') {
+        div.textContent = msg.sender + ': ' + msg.content;
+      } else if (msg.type === 'image') {
+        const img = document.createElement('img');
+        img.src = msg.content;
+        div.textContent = msg.sender + ': ';
+        div.appendChild(img);
+      }
+
+      messagesDiv.appendChild(div);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    adminSendBtn.addEventListener('click', () => {
+      const msg = adminMsgInput.value.trim();
+      if (msg) {
+        socket.emit('serverMessage', { type: 'text', content: msg });
+        adminMsgInput.value = '';
+      }
+    });
+
+    adminImgInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        socket.emit('serverMessage', { type: 'image', content: reader.result });
+      };
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>
