@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $productName = $_POST['product_name'];
     $reviewText = $_POST['review'];
 
-    // Step 1: Call Python Flask API
+    //Call Python Flask API
     $apiUrl = 'http://127.0.0.1:5000/analyze-review'; // Your local Python server
     $data = ['text' => $reviewText];
 
@@ -21,9 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $apiResponse = json_decode($response, true);
 
     $sentiment = $apiResponse['sentiment'] ?? 'unknown';
-    $isFake = $apiResponse['is_fake'] ?? 'no';
+    $isFake = $apiResponse['confidence'] ?? 'unknown';
+    $isFake = $isFake < 0.96 ? 'yes' : 'no';
 
-    // Step 2: Save in data/reviews.xml
+    // Save in data/reviews.xml
     $reviewFile = 'data/reviews.xml';
     if (file_exists($reviewFile)) {
         $xml = simplexml_load_file($reviewFile);

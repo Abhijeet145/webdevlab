@@ -1,2 +1,2 @@
 <?xml version="1.0"?>
-<products/>
+<products><filler/><item><id>1</id><name>Smartphone</name><price>699.99</price><quantity>1</quantity></item></products>

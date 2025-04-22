@@ -3,7 +3,8 @@ from transformers import pipeline
 
 # Load the models once
 fake_review_pipe =  pipeline("text-classification", model="theArijitDas/distilbert-finetuned-fake-reviews")     
-sentiment_pipe = pipeline("sentiment-analysis")  # You can switch to TextBlob or Vader if preferred
+sentiment_pipe = pipeline("sentiment-analysis")  # model used for sentiment analysis
+
 
 app = Flask(__name__)
 
@@ -18,7 +19,7 @@ def analyze_review():
 
     response = {
         'sentiment': sentiment_result['label'].lower(),
-        'is_fake': 'yes' if fake_result['label'] == 'Fake' else 'no',
+        'is_fake': fake_result['label'].lower(),
         'confidence': fake_result['score']
     }
     return jsonify(response)

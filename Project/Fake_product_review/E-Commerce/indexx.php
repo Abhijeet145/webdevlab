@@ -31,7 +31,7 @@ if ($isOrderPlaced === 'true') {
             // 4. Save to XML
             $xml->asXML($orderHistoryFile);
             // 5. Clear the cart
-            $xml = new SimpleXMLElement('<products></products>');
+            $xml = new SimpleXMLElement('<products><filler></filler></products>');
             $xml->asXML('data/cart.xml');
         }
 

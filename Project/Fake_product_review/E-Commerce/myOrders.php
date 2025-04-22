@@ -78,11 +78,12 @@ $orderHistoryFile = 'data/orderHistory.xml';
         <?php
         if (file_exists($orderHistoryFile)) {
             $xml = simplexml_load_file($orderHistoryFile);
-
+            
             if (count($xml->order) > 0) {
+                $orderNumber = 1;
                 foreach ($xml->order as $index => $order) {
                     echo "<div class='order'>";
-                    echo "<h2>Order #" . ($order->index + 1) . " — <small>{$order->timestamp}</small></h2>";
+                    echo "<h2>Order #" . ($orderNumber++) . " — <small>{$order->timestamp}</small></h2>";
 
                     if (!isset($order->product)) {
                         echo "<p><em>No products in this order.</em></p>";
