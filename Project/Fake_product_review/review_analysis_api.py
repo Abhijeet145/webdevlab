@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from transformers import pipeline
 
 # Load the models once
-fake_review_pipe = pipeline("text-classification", model="SravaniNirati/bert_fake_review_detection")
+fake_review_pipe =  pipeline("text-classification", model="theArijitDas/distilbert-finetuned-fake-reviews")     
 sentiment_pipe = pipeline("sentiment-analysis")  # You can switch to TextBlob or Vader if preferred
 
 app = Flask(__name__)
