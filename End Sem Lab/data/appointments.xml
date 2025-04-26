@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<appointments>
+
+<entry><patient_id>abhijeet</patient_id><doctor_id>abhi</doctor_id><time>11:00</time><problem>Fever</problem></entry><entry><patient_id>abhijeet</patient_id><doctor_id>abhi</doctor_id><time>11:00</time><problem>testing agjkbweg weg</problem></entry><entry><patient_id>pam_beesly</patient_id><doctor_id>abhi</doctor_id><time>11:00</time><problem>fever</problem></entry><entry><patient_id>michael_scott</patient_id><doctor_id>meredith_grey</doctor_id><time>11:00</time><problem>fever</problem></entry></appointments>

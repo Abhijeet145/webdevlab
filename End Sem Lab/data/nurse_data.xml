@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<nurses>
+    <entry>
+        <id>pam_beesly</id>
+        <name>Pam Beesly</name>
+        <email>pam.beesly@example.com</email>
+        <password>artislife</password>
+    </entry>
+    <entry>
+        <id>jim_halpert</id>
+        <name>Jim Halpert</name>
+        <email>jim.halpert@example.com</email>
+        <password>pranks123</password>
+    </entry>
+    <entry>
+        <id>angela_martin</id>
+        <name>Angela Martin</name>
+        <email>angela.martin@example.com</email>
+        <password>catslover</password>
+    </entry>
+    <entry>
+        <id>dwight_schrute</id>
+        <name>Dwight Schrute</name>
+        <email>dwight.schrute@example.com</email>
+        <password>beetsfarm</password>
+    </entry>
+</nurses>

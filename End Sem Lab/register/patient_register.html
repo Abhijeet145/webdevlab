@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Register</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Register</h1>
+        <form action="register_verify.php" method="POST">
+            <input type="text" name="id" placeholder="User ID" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <textarea name="medical_history" placeholder="Medical History" rows="3" required></textarea>
+            <input type="hidden" name="user_type" value="patient">
+            <button type="submit" value = "submit" class="btn" >Register</button>
+        </form>
+        
+
+    </div>
+</body>
+</html>

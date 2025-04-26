@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doctors>
+    <entry>
+        <id>abhi</id>
+        <name>Abhijeet Kumar</name>
+        <email>abhijeet145.akm@gmail.com</email>
+        <password>1234</password>
+        <specialization>General Medicine</specialization>
+        <available>Available</available>
+        <availability_time>10:00 - 12:00</availability_time>
+    </entry>
+    <entry>
+        <id>meredith_grey</id>
+        <name>Meredith Grey</name>
+        <email>meredith.grey@seattlegrace.com</email>
+        <password>neuro123</password>
+        <specialization>Neurosurgery</specialization>
+        <available>Available</available>
+        <availability_time>09:00 - 13:00</availability_time>
+    </entry>
+    <entry>
+        <id>gregory_house</id>
+        <name>Dr. Gregory House</name>
+        <email>house.md@princetonplainsboro.com</email>
+        <password>vicodin</password>
+        <specialization>Diagnostic Medicine</specialization>
+        <available>Available</available>
+        <availability_time>10:00 - 15:00</availability_time>
+    </entry>
+    <entry>
+        <id>miranda_bailey</id>
+        <name>Miranda Bailey</name>
+        <email>mbailey@seattlegrace.com</email>
+        <password>rules123</password>
+        <specialization>General Surgery</specialization>
+        <available>Not Available</available>
+        <availability_time>N/A</availability_time>
+    </entry>
+    <entry>
+        <id>jd_dorian</id>
+        <name>John Dorian</name>
+        <email>jdorian@sacredheart.com</email>
+        <password>eagle!</password>
+        <specialization>Internal Medicine</specialization>
+        <available>Available</available>
+        <availability_time>08:00 - 12:00</availability_time>
+    </entry>
+</doctors>

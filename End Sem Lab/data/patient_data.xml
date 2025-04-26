@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<patients>
+    <entry>
+        <id>abhijeet</id>
+        <name>Abhijeet Kumar</name>
+        <email>abhijeet145.akm@gmail.com</email>
+        <password>12345</password>
+        <medical_history>None</medical_history>
+        <nurse_assigned>N/A</nurse_assigned>
+        <treatements>N/A</treatements>
+        <appointments></appointments>
+    </entry>
+    <entry>
+        <id>michael_scott</id>
+        <name>Michael Scott</name>
+        <email>michael.scott@example.com</email>
+        <password>dundermifflin</password>
+        <medical_history>None</medical_history>
+        <nurse_assigned>Pam Beesly</nurse_assigned>
+        <treatements>Stress management</treatements>
+        <appointments></appointments>
+    </entry>
+    <entry>
+        <id>pam_beesly</id>
+        <name>Pam Beesly</name>
+        <email>pam.beesly@example.com</email>
+        <password>artislife</password>
+        <medical_history>None</medical_history>
+        <nurse_assigned>Jim Halpert</nurse_assigned>
+        <treatements>None</treatements>
+        <appointments></appointments>
+    </entry>
+    <entry>
+        <id>jim_halpert</id>
+        <name>Jim Halpert</name>
+        <email>jim.halpert@example.com</email>
+        <password>pranks123</password>
+        <medical_history>None</medical_history>
+        <nurse_assigned>Pam Beesly</nurse_assigned>
+        <treatements>None</treatements>
+        <appointments></appointments>
+    </entry>
+    <entry>
+        <id>dwight_schrute</id>
+        <name>Dwight Schrute</name>
+        <email>dwight.schrute@example.com</email>
+        <password>beetsfarm</password>
+        <medical_history>Allergies</medical_history>
+        <nurse_assigned>Angela Martin</nurse_assigned>
+        <treatements>Antihistamines</treatements>
+        <appointments></appointments>
+    </entry>
+    <entry>
+        <id>angela_martin</id>
+        <name>Angela Martin</name>
+        <email>angela.martin@example.com</email>
+        <password>catslover</password>
+        <medical_history>None</medical_history>
+        <nurse_assigned>Dwight Schrute</nurse_assigned>
+        <treatements>None</treatements>
+        <appointments></appointments>
+    </entry>
+</patients>
